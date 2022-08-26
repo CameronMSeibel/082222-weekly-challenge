@@ -136,4 +136,4 @@ function mergeLists(lists) {
 // Test cases
 console.log(mergeLists([new LinkedList([1,4,5]),new LinkedList([1,3,4]), new LinkedList([2,6])]).toString());
 console.log(mergeLists([]).toString());
-console.log(mergeLists([[]]).toString());
+console.log(mergeLists([new LinkedList([])]).toString());
