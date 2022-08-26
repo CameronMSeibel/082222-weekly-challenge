@@ -48,9 +48,6 @@ function mergeLists(lists) {
             }
         }
         merged.push(lists[list].shift());
-        if(lists[list] === []) {
-            lists.remove()
-        }
     }
     return merged;
 }
