@@ -42,16 +42,20 @@ function mergeLists(lists) {
         let list = 0;
         for(let j in lists) {
             let val = lists[j][0];
-            if(val < min && val !== undefined) {
+            if(val < min) {
                 min = val;
                 list = j;
             }
         }
         merged.push(lists[list].shift());
+        if(lists[list].length === 0) {
+            lists.splice(list, 1);
+        }
     }
     return merged;
 }
 
+// Test cases
 console.log(mergeLists([[1,4,5],[1,3,4],[2,6]]));
 console.log(mergeLists([]));
 console.log(mergeLists([[]]));
